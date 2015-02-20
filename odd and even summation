@@ -1,0 +1,55 @@
+# even-and-odd-summation
+/*salah Omar
+c programming 1111*/
+
+
+
+#include<stdio.h>
+#include<stdlib.h>
+
+
+
+int checkInput(int input);
+int main (void)
+{
+    // declare variables
+    int input; 
+    int odd;
+    int even;
+    
+    odd = 0;
+    even = 0;
+    
+    input = checkInput(input);
+    
+    while (input != 0){
+                
+                if ((input % 2) == 0){
+                           printf(" The number you entered is even\n ");
+                           even += input;}//end if
+                else{
+                     printf("The number you entered is odd\n");
+                     odd += input;}//end else
+                      
+                input = checkInput(input);
+                
+                     }// loop ends
+    printf("sum of even numbers is %d  \n",even);
+    printf("sum of odd numbers is %d  \n",odd);
+    
+    system("pause");
+    //now close the command prompt window
+    return 0;
+    }
+    
+    int checkInput(int input){
+        printf("Please Enter a number less than 100 Enter 0 to sum up numberes\n");
+        scanf("%d", &input);
+          
+        while (input>100){
+          printf("Please Enter a number less than 100 Enter 0 to sum up numberes\n");
+          scanf("%d", &input);
+          }
+          
+          return input;
+        }
